@@ -15,12 +15,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbarTab"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="WhatsApp"
-            app:titleTextColor="@color/white"/>
+            app:titleTextColor="@color/white">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/ivCamera"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+                android:src="@drawable/photo_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/ivSearch"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+                android:src="@drawable/search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/ivMorevert"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+                android:src="@drawable/dots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -50,6 +84,7 @@
             android:layout_height="wrap_content"
             android:text="Calls" />
     </com.google.android.material.tabs.TabLayout>
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/Pagerview"
